@@ -61,3 +61,10 @@ The follow-up compared a contemporaneously re-called original input with the sam
 Pooled price W1 improved modestly with three-round history (21.875 to 19.0625) and was equal with ten rounds (16.5625 in both arms); equal W1 does not mean identical CDFs or individual predictions. SELL prices remain too high. The seven-person history group and one-person no-history case are analyzed locally; their numeric distributions are suppressed publicly to prevent singleton/complement disclosure. These development results do not identify a model capacity limit or the cause of the remaining error.
 
 See the [safe report and CDFs](docs/analysis/jev-sell-semantics-comparison-2026-10-27.md), [module commands](docs/engineering/jev-sell-semantics-local-commands.md), and [generic prompt snapshot](docs/prompts/sell-semantics-v1.json). Input usage was 420,544 tokens, frozen-price cost USD0.017662848, measured elapsed16.422s and peak8 within the10 concurrency limit. Strict replay and independent arithmetic review passed. Targeted publication checks:58 passed,6 undistributed-private-evidence checks skipped; unchanged historical code was covered by the earlier full597-pass suite.
+
+
+## 扩大真人SELL价格诊断（2026-10-28）
+
+[给定真人数量的价格分布报告](docs/analysis/jev-expanded-sell-oracle-v2-2026-10-28.md)已完成101次真实Jev请求，覆盖28人、71个人轮、106笔SELL。主要单SELL组25人的真人与截断后模型均价分别为9.96与31.03美元，分布W1为21.07；两者中位价均10美元，剩余差距主要表现为过多高价质量。保留top-3＋3% cutoff、5元网格及10路并行上限；严格回放与独立复核通过，费用约0.0285美元。真人数量是已给条件，不能视为完整agent表现或与旧8人试验的数量因果比较；本次未跑20轮市场。
+
+[本地命令与修复说明](docs/engineering/jev-sell-oracle-v2.md) · [通用提示快照](docs/prompts/sell-oracle-v2.json)。原始个人数据、请求和小分组结果不公开。
