@@ -47,3 +47,9 @@ python -m tools.probes.jev_flat_grid5 replay --file flat-grid-mock.json
 ```
 
 The output file must be new. Replay checks request serialization, recorded responses, deterministic selections, and the full two-step path. Requests exceeding 255 choices or 12,000 serialized bytes fail before dispatch; history is not truncated.
+
+### Matched real-Jev price comparison, 2026-10-27
+
+The follow-up made 72 real price-only requests for the same 18 development people and three-/ten-round histories. Each old path's direction and selected quantity stayed fixed. With top-three/raw 3% decoding, prices >=$700 fell from 15 old paths to zero; the new protocol returned a price on all 72 paths. Person-balanced pooled price W1 improved in all four groups, while SELL prices remained too high. This is a conditional-price development result; the grid and hierarchical interface changed together, and it does not establish complete-policy fidelity or calibrated probabilities.
+
+See the [aggregate report and figures](docs/analysis/jev-flat-grid5-comparison-2026-10-27.md), [operating guide](docs/engineering/jev-flat-grid5-study.md), and [frozen generic prompt](docs/prompts/flat-grid5-price-study-v1.json). Actual input usage was 463,444 tokens, frozen-price cost USD 0.019464648, and peak HTTP concurrency 7 under the unchanged limit of 10. Strict wire/decoder/ledger replay and independent numerical review passed. No 20-round market was run. Private inputs and original wire logs remain undistributed; publishing these files does not authorize new model calls.

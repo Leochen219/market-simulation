@@ -1,0 +1,13 @@
+{
+  "schema": "jev-flat-grid5-posthoc-tail-audit-v1",
+  "plan_sha256": "8891b9242ff05f4df240ceac454a9aa7c3cccfe47ef581d9f458febbbe8aa281",
+  "requests": 72,
+  "price_min": 10.0,
+  "price_max": 95.0,
+  "max_raw_single_candidate_score_ge700": 0.02,
+  "raw_candidates_ge700_with_score_at_least_003": 0,
+  "retained_positive_candidates_ge700": 0,
+  "provider_choice_nonmax": 0,
+  "provider_choice_outside_candidates": 0,
+  "interpretation": "Post-hoc mechanism diagnostic; aggregate raw tail mass is not zero even when every individual tail option fails cutoff. Not a calibration test or extra model call."
+}

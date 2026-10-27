@@ -1,0 +1,1287 @@
+{
+  "schema": "jev-flat-grid5-comparison-v1",
+  "people": 18,
+  "planned_paths": 72,
+  "fixed_quantity_mismatches": 0,
+  "outcomes": {
+    "hierarchical_legacy_no_quote": 1,
+    "flat_client_numeric_abstain": 0
+  },
+  "groups": {
+    "long10": {
+      "BUY": {
+        "eligible_people": 10,
+        "planned_paths_per_method": 20,
+        "common_people": 10,
+        "common_paths": 20,
+        "methods": {
+          "hierarchical_2_5": {
+            "quoted": 20,
+            "no_quote": 0,
+            "events": {
+              "ge700": {
+                "events": 3,
+                "planned": 20,
+                "quoted": 20,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.15,
+                "among_quotes": 0.15,
+                "hypothetical_unreported_price_bounds": [
+                  0.15,
+                  0.15
+                ]
+              },
+              "700_to_800": {
+                "events": 1,
+                "planned": 20,
+                "quoted": 20,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.05,
+                "among_quotes": 0.05,
+                "hypothetical_unreported_price_bounds": [
+                  0.05,
+                  0.05
+                ]
+              },
+              "gt250": {
+                "events": 7,
+                "planned": 20,
+                "quoted": 20,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.35,
+                "among_quotes": 0.35,
+                "hypothetical_unreported_price_bounds": [
+                  0.35,
+                  0.35
+                ]
+              },
+              "above_retail": {
+                "events": 7,
+                "planned": 20,
+                "quoted": 20,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.35,
+                "among_quotes": 0.35,
+                "hypothetical_unreported_price_bounds": [
+                  0.35,
+                  0.35
+                ]
+              }
+            },
+            "raw_human_w1": 210.4999999999999,
+            "common_grid5_human_w1": 210.2499999999999,
+            "own_grid_human_w1": 210.2499999999999,
+            "raw_model_tail_available_paths": 20,
+            "raw_model_score_mass_ge700": 0.1938069911991199
+          },
+          "flat_5": {
+            "quoted": 20,
+            "no_quote": 0,
+            "events": {
+              "ge700": {
+                "events": 0,
+                "planned": 20,
+                "quoted": 20,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "700_to_800": {
+                "events": 0,
+                "planned": 20,
+                "quoted": 20,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "gt250": {
+                "events": 0,
+                "planned": 20,
+                "quoted": 20,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "above_retail": {
+                "events": 0,
+                "planned": 20,
+                "quoted": 20,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "raw_human_w1": 4.550000000000007,
+            "common_grid5_human_w1": 4.500000000000005,
+            "own_grid_human_w1": 4.500000000000005,
+            "raw_model_tail_available_paths": 20,
+            "raw_model_score_mass_ge700": 0.04318181818181818
+          }
+        },
+        "human_events": {
+          "ge700": 0.0,
+          "700_to_800": 0.0,
+          "gt250": 0.0,
+          "above_retail": 0.0
+        },
+        "common_distributions": {
+          "human_raw": {
+            "mean": 19.75,
+            "median": 11,
+            "p95": 67,
+            "cdf": [
+              {
+                "value": 10,
+                "mass": 0.35000000000000003,
+                "cdf": 0.35000000000000003
+              },
+              {
+                "value": 11,
+                "mass": 0.25,
+                "cdf": 0.6
+              },
+              {
+                "value": 13,
+                "mass": 0.1,
+                "cdf": 0.7000000000000001
+              },
+              {
+                "value": 15,
+                "mass": 0.1,
+                "cdf": 0.8
+              },
+              {
+                "value": 40,
+                "mass": 0.1,
+                "cdf": 0.9
+              },
+              {
+                "value": 67,
+                "mass": 0.1,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "human_grid5": {
+            "mean": 19.5,
+            "median": 10,
+            "p95": 65,
+            "cdf": [
+              {
+                "value": 10,
+                "mass": 0.6,
+                "cdf": 0.6
+              },
+              {
+                "value": 15,
+                "mass": 0.2,
+                "cdf": 0.8
+              },
+              {
+                "value": 40,
+                "mass": 0.1,
+                "cdf": 0.9
+              },
+              {
+                "value": 65,
+                "mass": 0.1,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "hierarchical_2_5": {
+            "mean": 229.75,
+            "median": 10.0,
+            "p95": 800.0,
+            "cdf": [
+              {
+                "value": 10.0,
+                "mass": 0.6000000000000001,
+                "cdf": 0.6000000000000001
+              },
+              {
+                "value": 95.0,
+                "mass": 0.05,
+                "cdf": 0.65
+              },
+              {
+                "value": 275.0,
+                "mass": 0.05,
+                "cdf": 0.7000000000000001
+              },
+              {
+                "value": 505.0,
+                "mass": 0.05,
+                "cdf": 0.75
+              },
+              {
+                "value": 560.0,
+                "mass": 0.05,
+                "cdf": 0.8
+              },
+              {
+                "value": 680.0,
+                "mass": 0.05,
+                "cdf": 0.8500000000000001
+              },
+              {
+                "value": 760.0,
+                "mass": 0.05,
+                "cdf": 0.9
+              },
+              {
+                "value": 800.0,
+                "mass": 0.1,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "flat_5": {
+            "mean": 18.0,
+            "median": 10.0,
+            "p95": 65.0,
+            "cdf": [
+              {
+                "value": 10.0,
+                "mass": 0.7000000000000001,
+                "cdf": 0.7000000000000001
+              },
+              {
+                "value": 15.0,
+                "mass": 0.2,
+                "cdf": 0.9
+              },
+              {
+                "value": 65.0,
+                "mass": 0.05,
+                "cdf": 0.9500000000000001
+              },
+              {
+                "value": 95.0,
+                "mass": 0.05,
+                "cdf": 1.0
+              }
+            ]
+          }
+        },
+        "human_full_distribution": {
+          "mean": 19.75,
+          "median": 11,
+          "p95": 67,
+          "cdf": [
+            {
+              "value": 10,
+              "mass": 0.35000000000000003,
+              "cdf": 0.35000000000000003
+            },
+            {
+              "value": 11,
+              "mass": 0.25,
+              "cdf": 0.6
+            },
+            {
+              "value": 13,
+              "mass": 0.1,
+              "cdf": 0.7000000000000001
+            },
+            {
+              "value": 15,
+              "mass": 0.1,
+              "cdf": 0.8
+            },
+            {
+              "value": 40,
+              "mass": 0.1,
+              "cdf": 0.9
+            },
+            {
+              "value": 67,
+              "mass": 0.1,
+              "cdf": 1.0
+            }
+          ]
+        },
+        "flat_minus_hierarchical_raw_w1": -205.94999999999987
+      },
+      "SELL": {
+        "eligible_people": 8,
+        "planned_paths_per_method": 16,
+        "common_people": 8,
+        "common_paths": 15,
+        "methods": {
+          "hierarchical_2_5": {
+            "quoted": 15,
+            "no_quote": 1,
+            "events": {
+              "ge700": {
+                "events": 4,
+                "planned": 16,
+                "quoted": 15,
+                "no_quote": 1,
+                "confirmed_quote_event_per_planned": 0.25,
+                "among_quotes": 0.26666666666666666,
+                "hypothetical_unreported_price_bounds": [
+                  0.25,
+                  0.3125
+                ]
+              },
+              "700_to_800": {
+                "events": 2,
+                "planned": 16,
+                "quoted": 15,
+                "no_quote": 1,
+                "confirmed_quote_event_per_planned": 0.125,
+                "among_quotes": 0.13333333333333333,
+                "hypothetical_unreported_price_bounds": [
+                  0.125,
+                  0.1875
+                ]
+              },
+              "gt250": {
+                "events": 4,
+                "planned": 16,
+                "quoted": 15,
+                "no_quote": 1,
+                "confirmed_quote_event_per_planned": 0.25,
+                "among_quotes": 0.26666666666666666,
+                "hypothetical_unreported_price_bounds": [
+                  0.25,
+                  0.3125
+                ]
+              },
+              "above_retail": {
+                "events": 4,
+                "planned": 16,
+                "quoted": 15,
+                "no_quote": 1,
+                "confirmed_quote_event_per_planned": 0.25,
+                "among_quotes": 0.26666666666666666,
+                "hypothetical_unreported_price_bounds": [
+                  0.25,
+                  0.3125
+                ]
+              }
+            },
+            "raw_human_w1": 252.34375,
+            "common_grid5_human_w1": 251.09375,
+            "own_grid_human_w1": 252.03125,
+            "raw_model_tail_available_paths": 16,
+            "raw_model_score_mass_ge700": 0.15433230198019804
+          },
+          "flat_5": {
+            "quoted": 16,
+            "no_quote": 0,
+            "events": {
+              "ge700": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "700_to_800": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "gt250": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "above_retail": {
+                "events": 1,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0625,
+                "among_quotes": 0.0625,
+                "hypothetical_unreported_price_bounds": [
+                  0.0625,
+                  0.0625
+                ]
+              }
+            },
+            "raw_human_w1": 20.625,
+            "common_grid5_human_w1": 19.375,
+            "own_grid_human_w1": 19.375,
+            "raw_model_tail_available_paths": 16,
+            "raw_model_score_mass_ge700": 0.02630681818181818
+          }
+        },
+        "human_events": {
+          "ge700": 0.0,
+          "700_to_800": 0.0,
+          "gt250": 0.0,
+          "above_retail": 0.0
+        },
+        "common_distributions": {
+          "human_raw": {
+            "mean": 8.75,
+            "median": 8,
+            "p95": 20,
+            "cdf": [
+              {
+                "value": 1,
+                "mass": 0.125,
+                "cdf": 0.125
+              },
+              {
+                "value": 5,
+                "mass": 0.125,
+                "cdf": 0.25
+              },
+              {
+                "value": 8,
+                "mass": 0.25,
+                "cdf": 0.5
+              },
+              {
+                "value": 9,
+                "mass": 0.25,
+                "cdf": 0.75
+              },
+              {
+                "value": 10,
+                "mass": 0.125,
+                "cdf": 0.875
+              },
+              {
+                "value": 20,
+                "mass": 0.125,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "human_grid5": {
+            "mean": 10.0,
+            "median": 10,
+            "p95": 20,
+            "cdf": [
+              {
+                "value": 5,
+                "mass": 0.25,
+                "cdf": 0.25
+              },
+              {
+                "value": 10,
+                "mass": 0.625,
+                "cdf": 0.875
+              },
+              {
+                "value": 20,
+                "mass": 0.125,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "hierarchical_2_5": {
+            "mean": 261.09375,
+            "median": 10.0,
+            "p95": 810.0,
+            "cdf": [
+              {
+                "value": 7.5,
+                "mass": 0.0625,
+                "cdf": 0.0625
+              },
+              {
+                "value": 10.0,
+                "mass": 0.4375,
+                "cdf": 0.5
+              },
+              {
+                "value": 20.0,
+                "mass": 0.0625,
+                "cdf": 0.5625
+              },
+              {
+                "value": 80.0,
+                "mass": 0.125,
+                "cdf": 0.6875
+              },
+              {
+                "value": 750.0,
+                "mass": 0.0625,
+                "cdf": 0.75
+              },
+              {
+                "value": 760.0,
+                "mass": 0.0625,
+                "cdf": 0.8125
+              },
+              {
+                "value": 800.0,
+                "mass": 0.125,
+                "cdf": 0.9375
+              },
+              {
+                "value": 810.0,
+                "mass": 0.0625,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "flat_5": {
+            "mean": 29.375,
+            "median": 10.0,
+            "p95": 90.0,
+            "cdf": [
+              {
+                "value": 10.0,
+                "mass": 0.5625,
+                "cdf": 0.5625
+              },
+              {
+                "value": 15.0,
+                "mass": 0.0625,
+                "cdf": 0.625
+              },
+              {
+                "value": 20.0,
+                "mass": 0.125,
+                "cdf": 0.75
+              },
+              {
+                "value": 75.0,
+                "mass": 0.0625,
+                "cdf": 0.8125
+              },
+              {
+                "value": 80.0,
+                "mass": 0.125,
+                "cdf": 0.9375
+              },
+              {
+                "value": 90.0,
+                "mass": 0.0625,
+                "cdf": 1.0
+              }
+            ]
+          }
+        },
+        "human_full_distribution": {
+          "mean": 8.75,
+          "median": 8,
+          "p95": 20,
+          "cdf": [
+            {
+              "value": 1,
+              "mass": 0.125,
+              "cdf": 0.125
+            },
+            {
+              "value": 5,
+              "mass": 0.125,
+              "cdf": 0.25
+            },
+            {
+              "value": 8,
+              "mass": 0.25,
+              "cdf": 0.5
+            },
+            {
+              "value": 9,
+              "mass": 0.25,
+              "cdf": 0.75
+            },
+            {
+              "value": 10,
+              "mass": 0.125,
+              "cdf": 0.875
+            },
+            {
+              "value": 20,
+              "mass": 0.125,
+              "cdf": 1.0
+            }
+          ]
+        },
+        "flat_minus_hierarchical_raw_w1": -231.71875
+      }
+    },
+    "short3": {
+      "BUY": {
+        "eligible_people": 10,
+        "planned_paths_per_method": 20,
+        "common_people": 10,
+        "common_paths": 20,
+        "methods": {
+          "hierarchical_2_5": {
+            "quoted": 20,
+            "no_quote": 0,
+            "events": {
+              "ge700": {
+                "events": 3,
+                "planned": 20,
+                "quoted": 20,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.15,
+                "among_quotes": 0.15,
+                "hypothetical_unreported_price_bounds": [
+                  0.15,
+                  0.15
+                ]
+              },
+              "700_to_800": {
+                "events": 0,
+                "planned": 20,
+                "quoted": 20,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "gt250": {
+                "events": 6,
+                "planned": 20,
+                "quoted": 20,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.3,
+                "among_quotes": 0.3,
+                "hypothetical_unreported_price_bounds": [
+                  0.3,
+                  0.3
+                ]
+              },
+              "above_retail": {
+                "events": 6,
+                "planned": 20,
+                "quoted": 20,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.3,
+                "among_quotes": 0.3,
+                "hypothetical_unreported_price_bounds": [
+                  0.3,
+                  0.3
+                ]
+              }
+            },
+            "raw_human_w1": 198.39999999999986,
+            "common_grid5_human_w1": 198.24999999999986,
+            "own_grid_human_w1": 198.24999999999986,
+            "raw_model_tail_available_paths": 20,
+            "raw_model_score_mass_ge700": 0.18710202020202021
+          },
+          "flat_5": {
+            "quoted": 20,
+            "no_quote": 0,
+            "events": {
+              "ge700": {
+                "events": 0,
+                "planned": 20,
+                "quoted": 20,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "700_to_800": {
+                "events": 0,
+                "planned": 20,
+                "quoted": 20,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "gt250": {
+                "events": 0,
+                "planned": 20,
+                "quoted": 20,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "above_retail": {
+                "events": 0,
+                "planned": 20,
+                "quoted": 20,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "raw_human_w1": 7.700000000000015,
+            "common_grid5_human_w1": 7.250000000000015,
+            "own_grid_human_w1": 7.250000000000015,
+            "raw_model_tail_available_paths": 20,
+            "raw_model_score_mass_ge700": 0.04422727272727273
+          }
+        },
+        "human_events": {
+          "ge700": 0.0,
+          "700_to_800": 0.0,
+          "gt250": 0.0,
+          "above_retail": 0.0
+        },
+        "common_distributions": {
+          "human_raw": {
+            "mean": 19.75,
+            "median": 11,
+            "p95": 67,
+            "cdf": [
+              {
+                "value": 10,
+                "mass": 0.35000000000000003,
+                "cdf": 0.35000000000000003
+              },
+              {
+                "value": 11,
+                "mass": 0.25,
+                "cdf": 0.6
+              },
+              {
+                "value": 13,
+                "mass": 0.1,
+                "cdf": 0.7000000000000001
+              },
+              {
+                "value": 15,
+                "mass": 0.1,
+                "cdf": 0.8
+              },
+              {
+                "value": 40,
+                "mass": 0.1,
+                "cdf": 0.9
+              },
+              {
+                "value": 67,
+                "mass": 0.1,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "human_grid5": {
+            "mean": 19.5,
+            "median": 10,
+            "p95": 65,
+            "cdf": [
+              {
+                "value": 10,
+                "mass": 0.6,
+                "cdf": 0.6
+              },
+              {
+                "value": 15,
+                "mass": 0.2,
+                "cdf": 0.8
+              },
+              {
+                "value": 40,
+                "mass": 0.1,
+                "cdf": 0.9
+              },
+              {
+                "value": 65,
+                "mass": 0.1,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "hierarchical_2_5": {
+            "mean": 217.5,
+            "median": 10.0,
+            "p95": 800.0,
+            "cdf": [
+              {
+                "value": 7.5,
+                "mass": 0.05,
+                "cdf": 0.05
+              },
+              {
+                "value": 10.0,
+                "mass": 0.5,
+                "cdf": 0.55
+              },
+              {
+                "value": 12.5,
+                "mass": 0.05,
+                "cdf": 0.6000000000000001
+              },
+              {
+                "value": 15.0,
+                "mass": 0.1,
+                "cdf": 0.7000000000000001
+              },
+              {
+                "value": 560.0,
+                "mass": 0.05,
+                "cdf": 0.75
+              },
+              {
+                "value": 600.0,
+                "mass": 0.05,
+                "cdf": 0.8
+              },
+              {
+                "value": 640.0,
+                "mass": 0.05,
+                "cdf": 0.8500000000000001
+              },
+              {
+                "value": 800.0,
+                "mass": 0.15000000000000002,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "flat_5": {
+            "mean": 12.25,
+            "median": 10.0,
+            "p95": 20.0,
+            "cdf": [
+              {
+                "value": 10.0,
+                "mass": 0.65,
+                "cdf": 0.65
+              },
+              {
+                "value": 15.0,
+                "mass": 0.25,
+                "cdf": 0.9
+              },
+              {
+                "value": 20.0,
+                "mass": 0.1,
+                "cdf": 1.0
+              }
+            ]
+          }
+        },
+        "human_full_distribution": {
+          "mean": 19.75,
+          "median": 11,
+          "p95": 67,
+          "cdf": [
+            {
+              "value": 10,
+              "mass": 0.35000000000000003,
+              "cdf": 0.35000000000000003
+            },
+            {
+              "value": 11,
+              "mass": 0.25,
+              "cdf": 0.6
+            },
+            {
+              "value": 13,
+              "mass": 0.1,
+              "cdf": 0.7000000000000001
+            },
+            {
+              "value": 15,
+              "mass": 0.1,
+              "cdf": 0.8
+            },
+            {
+              "value": 40,
+              "mass": 0.1,
+              "cdf": 0.9
+            },
+            {
+              "value": 67,
+              "mass": 0.1,
+              "cdf": 1.0
+            }
+          ]
+        },
+        "flat_minus_hierarchical_raw_w1": -190.69999999999985
+      },
+      "SELL": {
+        "eligible_people": 8,
+        "planned_paths_per_method": 16,
+        "common_people": 8,
+        "common_paths": 16,
+        "methods": {
+          "hierarchical_2_5": {
+            "quoted": 16,
+            "no_quote": 0,
+            "events": {
+              "ge700": {
+                "events": 5,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.3125,
+                "among_quotes": 0.3125,
+                "hypothetical_unreported_price_bounds": [
+                  0.3125,
+                  0.3125
+                ]
+              },
+              "700_to_800": {
+                "events": 2,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.125,
+                "among_quotes": 0.125,
+                "hypothetical_unreported_price_bounds": [
+                  0.125,
+                  0.125
+                ]
+              },
+              "gt250": {
+                "events": 5,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.3125,
+                "among_quotes": 0.3125,
+                "hypothetical_unreported_price_bounds": [
+                  0.3125,
+                  0.3125
+                ]
+              },
+              "above_retail": {
+                "events": 5,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.3125,
+                "among_quotes": 0.3125,
+                "hypothetical_unreported_price_bounds": [
+                  0.3125,
+                  0.3125
+                ]
+              }
+            },
+            "raw_human_w1": 264.84375,
+            "common_grid5_human_w1": 263.59375,
+            "own_grid_human_w1": 264.53125,
+            "raw_model_tail_available_paths": 16,
+            "raw_model_score_mass_ge700": 0.18131250000000002
+          },
+          "flat_5": {
+            "quoted": 16,
+            "no_quote": 0,
+            "events": {
+              "ge700": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "700_to_800": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "gt250": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "above_retail": {
+                "events": 3,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.1875,
+                "among_quotes": 0.1875,
+                "hypothetical_unreported_price_bounds": [
+                  0.1875,
+                  0.1875
+                ]
+              }
+            },
+            "raw_human_w1": 24.375,
+            "common_grid5_human_w1": 23.125,
+            "own_grid_human_w1": 23.125,
+            "raw_model_tail_available_paths": 16,
+            "raw_model_score_mass_ge700": 0.04891414141414142
+          }
+        },
+        "human_events": {
+          "ge700": 0.0,
+          "700_to_800": 0.0,
+          "gt250": 0.0,
+          "above_retail": 0.0
+        },
+        "common_distributions": {
+          "human_raw": {
+            "mean": 8.75,
+            "median": 8,
+            "p95": 20,
+            "cdf": [
+              {
+                "value": 1,
+                "mass": 0.125,
+                "cdf": 0.125
+              },
+              {
+                "value": 5,
+                "mass": 0.125,
+                "cdf": 0.25
+              },
+              {
+                "value": 8,
+                "mass": 0.25,
+                "cdf": 0.5
+              },
+              {
+                "value": 9,
+                "mass": 0.25,
+                "cdf": 0.75
+              },
+              {
+                "value": 10,
+                "mass": 0.125,
+                "cdf": 0.875
+              },
+              {
+                "value": 20,
+                "mass": 0.125,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "human_grid5": {
+            "mean": 10.0,
+            "median": 10,
+            "p95": 20,
+            "cdf": [
+              {
+                "value": 5,
+                "mass": 0.25,
+                "cdf": 0.25
+              },
+              {
+                "value": 10,
+                "mass": 0.625,
+                "cdf": 0.875
+              },
+              {
+                "value": 20,
+                "mass": 0.125,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "hierarchical_2_5": {
+            "mean": 273.59375,
+            "median": 20.0,
+            "p95": 950.0,
+            "cdf": [
+              {
+                "value": 7.5,
+                "mass": 0.0625,
+                "cdf": 0.0625
+              },
+              {
+                "value": 10.0,
+                "mass": 0.375,
+                "cdf": 0.4375
+              },
+              {
+                "value": 20.0,
+                "mass": 0.0625,
+                "cdf": 0.5
+              },
+              {
+                "value": 60.0,
+                "mass": 0.0625,
+                "cdf": 0.5625
+              },
+              {
+                "value": 80.0,
+                "mass": 0.125,
+                "cdf": 0.6875
+              },
+              {
+                "value": 750.0,
+                "mass": 0.0625,
+                "cdf": 0.75
+              },
+              {
+                "value": 760.0,
+                "mass": 0.0625,
+                "cdf": 0.8125
+              },
+              {
+                "value": 800.0,
+                "mass": 0.0625,
+                "cdf": 0.875
+              },
+              {
+                "value": 810.0,
+                "mass": 0.0625,
+                "cdf": 0.9375
+              },
+              {
+                "value": 950.0,
+                "mass": 0.0625,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "flat_5": {
+            "mean": 33.125,
+            "median": 10.0,
+            "p95": 90.0,
+            "cdf": [
+              {
+                "value": 10.0,
+                "mass": 0.5625,
+                "cdf": 0.5625
+              },
+              {
+                "value": 15.0,
+                "mass": 0.0625,
+                "cdf": 0.625
+              },
+              {
+                "value": 30.0,
+                "mass": 0.0625,
+                "cdf": 0.6875
+              },
+              {
+                "value": 65.0,
+                "mass": 0.0625,
+                "cdf": 0.75
+              },
+              {
+                "value": 75.0,
+                "mass": 0.125,
+                "cdf": 0.875
+              },
+              {
+                "value": 90.0,
+                "mass": 0.125,
+                "cdf": 1.0
+              }
+            ]
+          }
+        },
+        "human_full_distribution": {
+          "mean": 8.75,
+          "median": 8,
+          "p95": 20,
+          "cdf": [
+            {
+              "value": 1,
+              "mass": 0.125,
+              "cdf": 0.125
+            },
+            {
+              "value": 5,
+              "mass": 0.125,
+              "cdf": 0.25
+            },
+            {
+              "value": 8,
+              "mass": 0.25,
+              "cdf": 0.5
+            },
+            {
+              "value": 9,
+              "mass": 0.25,
+              "cdf": 0.75
+            },
+            {
+              "value": 10,
+              "mass": 0.125,
+              "cdf": 0.875
+            },
+            {
+              "value": 20,
+              "mass": 0.125,
+              "cdf": 1.0
+            }
+          ]
+        },
+        "flat_minus_hierarchical_raw_w1": -240.46875
+      }
+    }
+  },
+  "interpretation": "Conditional prices at quantities chosen by the frozen old policy, not a full two-stage rerun. Primary W1 compares person-balanced pooled price distributions on identical successful paths, not average per-person errors. No quote is never a zero price or human STOP. High-event/planned and quoted-only fractions are separate; unreported-price bounds are hypothetical sensitivity, not identified probabilities for abstentions. Raw score mixtures are uncalibrated and conditional on fixed quantity. Grid, hierarchical interface and necessary wording differ; no unique causal attribution. Two repeats and one-market development participants do not establish calibration or generalization.",
+  "status": {
+    "physical_requests": 72,
+    "status": "COMPLETE"
+  },
+  "plan_sha256": "8891b9242ff05f4df240ceac454a9aa7c3cccfe47ef581d9f458febbbe8aa281",
+  "baseline_plan_sha256": "deab3fb260d7d05a76b5ffd18bf8242b158c7fc0c1ecb9ec077309f1276293e4",
+  "accounting": {
+    "requests": 72,
+    "input_tokens": 463444,
+    "cost_nanodollars": 19464648,
+    "observed_peak_inflight": 7,
+    "max_rolling_second_requests": 4,
+    "max_rolling_reserved_bytes": 48000,
+    "elapsed_seconds": 17.969000000011874
+  }
+}
