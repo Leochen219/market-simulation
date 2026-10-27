@@ -33,3 +33,38 @@ The full-order J1 interface generates BUY/SELL/STOP one order at a time; J2 choo
 Longer personal history improved some quantity distributions in the evaluated development sample, while a substantial price gap remained. Results are not evidence of calibrated human behavior. Recent Jev diagnostics did not run a new 20-round Jev market. See [current research summary](docs/current-state.md) and [architecture](docs/architecture.md).
 
 Source code licensing has not yet been selected. Participant data, original logs, private policies, and model weights are not redistributed.
+
+## Flat five-dollar diagnostic
+
+The separate `flat_price_grid5_v1` diagnostic makes two choices, quantity then a single per-unit limit price from $5 to $995 in $5 increments. It retains all 199 prices in the request and uses client-side top-three/raw 3% sampling. If valid probabilities have no surviving candidate, the client discards the unfinished draft and retains submitted orders. This is a supplied-side, single-order diagnostic; it does not add a model STOP choice. The existing hierarchical $2.50 grid studies remain historical and unchanged. Prices are conditional on the supplied side and selected quantity, without conditioning on a price band; the raw returned probabilities determine the cutoff. This is a new action domain, not paper-equivalent: for example, projecting a historical $1 price to $5 changes it by $4. This implementation and its mock tests do not establish an improvement in human fidelity.
+
+With the optional Jev SDK installed, the commands below use synthetic data and an offline mock only. They do not make model calls:
+
+```sh
+python -m tools.probes.jev_flat_grid5 preview
+python -m tools.probes.jev_flat_grid5 mock-run --file flat-grid-mock.json
+python -m tools.probes.jev_flat_grid5 replay --file flat-grid-mock.json
+```
+
+The output file must be new. Replay checks request serialization, recorded responses, deterministic selections, and the full two-step path. Requests exceeding 255 choices or 12,000 serialized bytes fail before dispatch; history is not truncated.
+
+### Matched real-Jev price comparison, 2026-10-27
+
+The follow-up made 72 real price-only requests for the same 18 development people and three-/ten-round histories. Each old path's direction and selected quantity stayed fixed. With top-three/raw 3% decoding, prices >=$700 fell from 15 old paths to zero; the new protocol returned a price on all 72 paths. Person-balanced pooled price W1 improved in all four groups, while SELL prices remained too high. This is a conditional-price development result; the grid and hierarchical interface changed together, and it does not establish complete-policy fidelity or calibrated probabilities.
+
+See the [aggregate report and figures](docs/analysis/jev-flat-grid5-comparison-2026-10-27.md), [operating guide](docs/engineering/jev-flat-grid5-study.md), and [frozen generic prompt](docs/prompts/flat-grid5-price-study-v1.json). Actual input usage was 463,444 tokens, frozen-price cost USD 0.019464648, and peak HTTP concurrency 7 under the unchanged limit of 10. Strict wire/decoder/ledger replay and independent numerical review passed. No 20-round market was run. Private inputs and original wire logs remain undistributed; publishing these files does not authorize new model calls.
+
+### Neutral SELL-rule definitions: paired comparison
+
+The follow-up compared a contemporaneously re-called original input with the same input plus one neutral definition field: own retail value, already-incurred procurement cost, inventory expiry, BUY/SELL limits, price priority and uniform clearing. The same eight SELL people, three-/ten-round histories, old selected quantities, 199 price choices, paired random draws and top-3/raw 3% decoder were retained. All 64 price requests completed; no new market was run.
+
+Pooled price W1 improved modestly with three-round history (21.875 to 19.0625) and was equal with ten rounds (16.5625 in both arms); equal W1 does not mean identical CDFs or individual predictions. SELL prices remain too high. The seven-person history group and one-person no-history case are analyzed locally; their numeric distributions are suppressed publicly to prevent singleton/complement disclosure. These development results do not identify a model capacity limit or the cause of the remaining error.
+
+See the [safe report and CDFs](docs/analysis/jev-sell-semantics-comparison-2026-10-27.md), [module commands](docs/engineering/jev-sell-semantics-local-commands.md), and [generic prompt snapshot](docs/prompts/sell-semantics-v1.json). Input usage was 420,544 tokens, frozen-price cost USD0.017662848, measured elapsed16.422s and peak8 within the10 concurrency limit. Strict replay and independent arithmetic review passed. Targeted publication checks:58 passed,6 undistributed-private-evidence checks skipped; unchanged historical code was covered by the earlier full597-pass suite.
+
+
+## 扩大真人SELL价格诊断（2026-10-28）
+
+[给定真人数量的价格分布报告](docs/analysis/jev-expanded-sell-oracle-v2-2026-10-28.md)已完成101次真实Jev请求，覆盖28人、71个人轮、106笔SELL。主要单SELL组25人的真人与截断后模型均价分别为9.96与31.03美元，分布W1为21.07；两者中位价均10美元，剩余差距主要表现为过多高价质量。保留top-3＋3% cutoff、5元网格及10路并行上限；严格回放与独立复核通过，费用约0.0285美元。真人数量是已给条件，不能视为完整agent表现或与旧8人试验的数量因果比较；本次未跑20轮市场。
+
+[本地命令与修复说明](docs/engineering/jev-sell-oracle-v2.md) · [通用提示快照](docs/prompts/sell-oracle-v2.json)。原始个人数据、请求和小分组结果不公开。
