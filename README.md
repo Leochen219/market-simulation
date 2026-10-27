@@ -33,3 +33,17 @@ The full-order J1 interface generates BUY/SELL/STOP one order at a time; J2 choo
 Longer personal history improved some quantity distributions in the evaluated development sample, while a substantial price gap remained. Results are not evidence of calibrated human behavior. Recent Jev diagnostics did not run a new 20-round Jev market. See [current research summary](docs/current-state.md) and [architecture](docs/architecture.md).
 
 Source code licensing has not yet been selected. Participant data, original logs, private policies, and model weights are not redistributed.
+
+## Flat five-dollar diagnostic
+
+The separate `flat_price_grid5_v1` diagnostic makes two choices, quantity then a single per-unit limit price from $5 to $995 in $5 increments. It retains all 199 prices in the request and uses client-side top-three/raw 3% sampling. If valid probabilities have no surviving candidate, the client discards the unfinished draft and retains submitted orders. This is a supplied-side, single-order diagnostic; it does not add a model STOP choice. The existing hierarchical $2.50 grid studies remain historical and unchanged. Prices are conditional on the supplied side and selected quantity, without conditioning on a price band; the raw returned probabilities determine the cutoff. This is a new action domain, not paper-equivalent: for example, projecting a historical $1 price to $5 changes it by $4. This implementation and its mock tests do not establish an improvement in human fidelity.
+
+With the optional Jev SDK installed, the commands below use synthetic data and an offline mock only. They do not make model calls:
+
+```sh
+python -m tools.probes.jev_flat_grid5 preview
+python -m tools.probes.jev_flat_grid5 mock-run --file flat-grid-mock.json
+python -m tools.probes.jev_flat_grid5 replay --file flat-grid-mock.json
+```
+
+The output file must be new. Replay checks request serialization, recorded responses, deterministic selections, and the full two-step path. Requests exceeding 255 choices or 12,000 serialized bytes fail before dispatch; history is not truncated.
