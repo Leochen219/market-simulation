@@ -1,0 +1,24 @@
+{
+  "schema": "jev_best_development_config_v1",
+  "status": "DEVELOPMENT_ONLY_NOT_PRODUCTION_DEFAULT",
+  "prompt": "explicit",
+  "decoder": "client_argmax",
+  "prompt_text": "You are an observer predicting what orders this participant would submit. Predict the complete order portfolio this participant would submit in this paper-market round. This is a forecast of participant behavior, not a recommendation or profit-maximization task. Demand D and own pre-trading inventory Q are known to the participant. The GA market has 35 participants. A participant may submit up to five blind BUY or SELL limit orders; each quantity and integer-dollar limit is from 1 through 999. Gross submitted sells cannot exceed initial Q. Mixed sides, repeated prices, and crossed limits are allowed by the observed order interface. Orders clear by price priority, with partial or zero fills possible; matched trades use a uniform midpoint price from the last matched bid and ask. Same-round unused inventory expires. The visible pretrade projection is accounting information, not a forecast of fills. The platform's exact tie allocation, self-match handling, and cash enforcement are not established, so do not infer additional rules. Use the current observation and anonymous examples from this same participant only. Historical examples show choices, not their outcomes or later feedback. For a numeric order field, choose one listed digit and carry forward the prefix implied by earlier choices; leading zeroes count. STOP ends submission. Do not invent an unlisted action. Choose exactly one listed candidate.\n\npartial_orders contains your own earlier predictions in this same forecast, not newly observed actions from the participant. These orders form one joint submitted portfolio. A new BUY or SELL adds an order; it does not replace an earlier order. STOP means you predict that the participant submits no additional order.\n\nEach object in partial_orders is one complete order already predicted earlier in this same forecast. These are accumulated submitted order intentions, not executed trades or newly observed actions by the participant. quantity_units is the quantity of that individual order, and limit_price_dollars_per_unit is its per-unit limit price. Adding an order leaves every earlier order in the portfolio. The submitted_order_ledger summarizes only these complete orders; it does not describe filled purchases or sales. When present, own_side and own_qty_units describe the current order being constructed; that unfinished order is not yet included in partial_orders or the ledger. Selecting STOP predicts that the participant adds no further order; it keeps the earlier orders in the predicted portfolio. remaining_sell_submission_capacity_units is remaining gross SELL order-submission capacity, not inventory after trade execution.",
+  "prompt_sha256": "7b713ac4797e3c0f54aa89fb0cbb73351c42919152ee969ffd063c2c3ada41a7",
+  "preview_sha256": "a17cbbe2b25522a1b8b3c5dfacb1703afe4ef94ba1a014d3cfa4b55e0665b54d",
+  "model": "jev-1.14.0",
+  "seed": 20261026,
+  "mean_primary_curve_error": 16.80663997330664,
+  "participants": 6,
+  "repeats_per_participant": 2,
+  "current_actual_human_Q_supplied": true,
+  "history_rounds": 3,
+  "full_action_domain_preserved": true,
+  "limitations": [
+    "Six reused development participants, not 72 independent people.",
+    "Current human procurement Q supplied; this is submitted-order prediction, not market earnings.",
+    "No selection of best repetition; two repeats do not establish calibration.",
+    "Fixed sequential prompt batches cannot separate prompt effects from provider/time drift.",
+    "Raw side-specific limit-price means are not matched-price accuracy."
+  ]
+}

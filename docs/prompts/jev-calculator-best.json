@@ -1,0 +1,75 @@
+{
+  "recorded_on": "2026-10-24",
+  "model": "jev-1.14.0",
+  "sdk": "typesafe-sdk==0.7.5",
+  "recommended_profile": "calculator_v3",
+  "recommended_condition": "v3",
+  "scope": "Best supported by this 12-state development comparison; not a general model/market readiness certificate.",
+  "selection_rule": "Promote v3 iff zero-demand correct count, overall unique-optimum correct count and full-coverage count are all nondecreasing versus concurrent v2, and at least one strictly improves.",
+  "selection_metrics": {
+    "v2": {
+      "zero_demand_correct": 0,
+      "zero_demand_n": 6,
+      "unique_correct": 54,
+      "unique_n": 66,
+      "full_coverage_sessions": 47,
+      "sessions": 72
+    },
+    "v3": {
+      "zero_demand_correct": 6,
+      "zero_demand_n": 6,
+      "unique_correct": 65,
+      "unique_n": 66,
+      "full_coverage_sessions": 72,
+      "sessions": 72
+    }
+  },
+  "plan_sha256": "774ddaeece0b820a05d957c105d51a8506bb4cc9dcc32a9a3605e1404492f21a",
+  "tool_prompt_template": {
+    "path": "jev-calculator-best-tool-template.txt",
+    "sha256": "9603c487f0b882c92f6991d1d5ab61695dd4587ec405acd3debcfd7ba83df702"
+  },
+  "source_version_template": {
+    "path": "jev-calculator-v3-tool-template.txt",
+    "sha256": "9603c487f0b882c92f6991d1d5ab61695dd4587ec405acd3debcfd7ba83df702"
+  },
+  "final_prompt": {
+    "path": "jev-calculator-final-v1.txt",
+    "sha256": "637e7d92692f6ddc97f7b6eba2eb4efe20ac46934212949c7b3b4e5e80689a6e"
+  },
+  "rendering_rule": "For v3 substitute candidate_ids with comma-space joined IDs of all listed STOP/BUY/SELL choices, preserving their order. Do not include CALCULATE IDs. Use build_instruction(request, calculator_v3); placeholders must be rendered.",
+  "rendered_variants": {
+    "binary-original": {
+      "path": "jev-calculator-v3-tool-binary-original.txt",
+      "sha256": "a7840a35cf659cf79596428a82e5f889dc60b9d2c60b619006f6476afb9dec71"
+    },
+    "binary-reversed": {
+      "path": "jev-calculator-v3-tool-binary-reversed.txt",
+      "sha256": "0b6b33f1e8672996cc2ecdf4d4e9ebb79fe33aee909a801a999c08e765827894"
+    },
+    "three-original": {
+      "path": "jev-calculator-v3-tool-three-original.txt",
+      "sha256": "5b9ad82f334d767db6bcf3d5f51d46a44c668eae913686be0934aa5d6ad30338"
+    },
+    "three-reversed": {
+      "path": "jev-calculator-v3-tool-three-reversed.txt",
+      "sha256": "7d2df11834f38f728e2a0c094511cd9bc2b41233da7a88e3c91a5cc6c6c07248"
+    }
+  },
+  "known_remaining_errors": [
+    {
+      "case_id": "sell_surplus",
+      "order": "reversed",
+      "repetition": 0,
+      "selected": "STOP",
+      "query_order": [
+        "c1",
+        "c0"
+      ],
+      "payoffs_cents": {
+        "c0": 80000,
+        "c1": 110000
+      }
+    }
+  ]
+}

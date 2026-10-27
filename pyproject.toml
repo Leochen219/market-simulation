@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capclaims"
+version = "0.1.0"
+description = "Research simulation core for an AI capacity-claims market"
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6.0"]
+
+[project.optional-dependencies]
+laya = ["laya==0.4.13", "transformers==4.57.6"]
+jev = ["typesafe-sdk==0.7.5", "python-dotenv>=1.0"]
+analysis = ["matplotlib>=3.8"]
+dev = ["pytest>=8", "pytest-asyncio>=0.23", "typesafe-sdk==0.7.5", "httpx2==2.16.0", "openpyxl>=3.1", "python-dotenv>=1.0"]
+
+[project.scripts]
+capclaims = "capclaims.cli:main"
+capclaims-jev-conditional = "capclaims.conditional_behavior.cli:main"
+capclaims-jev-behavioral-memory = "capclaims.behavioral_memory.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = ["requires_participant_data: requires the private authorized participant source and registries"]

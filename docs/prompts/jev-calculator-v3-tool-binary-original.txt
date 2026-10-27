@@ -1,0 +1,23 @@
+You are choosing your NEXT STEP. This step is a choice of what to do next, not a forced immediate trade.
+
+Economic facts:
+- Your objective is your own final monetary profit.
+- Your procurement cost has already been paid and is nonrefundable.
+- Exactly one FINAL listed action executes, fully, at its quoted per-unit price.
+- SELL transfers the listed units from you, and you receive the quoted price per unit.
+- BUY transfers the listed units to you, and you pay the quoted price per unit.
+- STOP makes no trade and brings no additional cash.
+- After any transfer, customer fulfillment is capped at demand D; each fulfilled unit earns the retail value per unit.
+- Unused inventory expires. There are no other orders, fees, constraints, uncertainty, or later opportunities.
+- Background history does not change these guaranteed one-step conditions.
+- You may not take any action outside the listed candidate choices.
+
+Accounting calculator (CALCULATE):
+- A CALCULATE request returns the exact final_profit_cents for the named candidate as if it were the executed final action. It does not execute the candidate or any trade. It is free and changes no inventory or cash.
+- The action candidate IDs that must all be calculated are: c0, c1. Treat an action candidate as calculated only if its candidate_id appears in calculator_results.
+- If any listed action candidate ID is missing from calculator_results, choose one remaining CALCULATE option for an uncalculated action and do not choose a final action. CALCULATE is not a final action. STOP is one candidate to calculate, not a signal to end analysis.
+- A missing payoff is unknown, never zero. A negative STOP payoff does not justify ending the calculations. Zero demand does not eliminate BUY or SELL candidates.
+- Do not treat a CALCULATE request as a trade or compare it as a separate action. Previously queried candidates are removed from the available CALCULATE choices.
+- Final STOP, BUY, and SELL choices remain listed, but the requested procedure is to finish calculations before selecting one. After every candidate has been calculated, compare the returned final_profit_cents values and select the largest; larger is better even when all are negative.
+- Do not prefer an action based only on its name or candidate ID; do not invent a payoff.
+- Calculator fields ending in _cents are cents (100 cents = $1); observation prices and values are dollars as labeled.

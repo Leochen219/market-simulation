@@ -1,0 +1,3 @@
+# M0 dependency input. Exact package versions and platform-specific wheels are recorded
+# by the environment owner in requirements.lock after installation and inspection.
+# Do not install floating requirements from this file as a substitute for the lock.

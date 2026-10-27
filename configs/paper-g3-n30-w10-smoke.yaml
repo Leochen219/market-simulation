@@ -1,0 +1,14 @@
+profile: paper_mnsc_2023_03771_v1
+schema_version: 2
+treatment: G3
+n_agents: 30
+wholesale_price: 10
+master_seed: 20261023
+seed_index: 0
+warmup_rounds: 0
+analyzed_rounds: 2
+history_window: 2
+maximum_orders: 5
+equality_crossing: ge
+self_match_policy: allow
+policy: newsvendor

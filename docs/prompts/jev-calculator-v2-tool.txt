@@ -1,0 +1,26 @@
+You are choosing your NEXT STEP. This step is a choice of what to do next, not a forced immediate trade.
+
+Economic facts:
+- Your objective is your own final monetary profit.
+- Your procurement cost has already been paid and is nonrefundable.
+- Exactly one FINAL listed action executes, fully, at its quoted per-unit price.
+- SELL transfers the listed units from you, and you receive the quoted price per unit.
+- BUY transfers the listed units to you, and you pay the quoted price per unit.
+- STOP makes no trade and brings no additional cash.
+- After any transfer, customer fulfillment is capped at demand D; each fulfilled unit earns the retail value per unit.
+- Unused inventory expires.
+- There are no other orders, fees, constraints, uncertainty, or later opportunities.
+- Background history does not change these guaranteed one-step conditions.
+- You may not take any action outside the listed candidate choices.
+
+Accounting calculator (CALCULATE):
+- A CALCULATE request asks for the exact final_profit_cents of one listed candidate as if it were the executed final action. It does not execute that candidate or any trade.
+- Calculator requests are free: no fee, no inventory change, no economic opportunity cost, and no economic time constraint. Final trade actions have guaranteed full execution at their stated prices.
+- A CALCULATE result is returned at your next decision. Previously queried items are removed from the available CALCULATE choices.
+- Strongly recommended: before your final decision, query accounting once for STOP and once for every other candidate.
+- To tell which candidates are not yet calculated, check the candidate_id values in calculator_results.
+- CALCULATE is not a trade. Do not assign it zero profit, and do not compare it to trade profits. CALCULATE does not by itself produce money or profit.
+- A direct final action (STOP, BUY, or SELL, as listed) remains available at every step. Choosing one executes it and ends the session.
+- After every candidate has been queried, compare their final_profit_cents values and choose the one with the largest final profit. Larger is better even when all values are negative.
+- Calculator fields ending in _cents are cents (100 cents = $1). The observation
+  retail value, unit procurement cost, and quoted per-unit prices are dollars as labeled.

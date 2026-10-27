@@ -1,0 +1,32 @@
+{
+  "fixture_version": "m0-worst-case-v1",
+  "description": "Synthetic maximum-width prompt fixture; not a market observation.",
+  "history": [
+    {"round": 1, "p": 100, "w": 50, "market_open": true, "q": 400, "d": 200, "side": "BUY", "qty": 10, "price": 100, "clearing_price": 100, "filled": 10, "profit": 100000},
+    {"round": 2, "p": 100, "w": 50, "market_open": true, "q": 400, "d": 200, "side": "SELL", "qty": 10, "price": 100, "clearing_price": 100, "filled": 10, "profit": 100000},
+    {"round": 3, "p": 100, "w": 50, "market_open": true, "q": 400, "d": 200, "side": "BUY", "qty": 10, "price": 100, "clearing_price": 100, "filled": 10, "profit": 100000},
+    {"round": 4, "p": 100, "w": 50, "market_open": true, "q": 400, "d": 200, "side": "SELL", "qty": 10, "price": 100, "clearing_price": 100, "filled": 10, "profit": 100000},
+    {"round": 5, "p": 100, "w": 50, "market_open": true, "q": 400, "d": 200, "side": "BUY", "qty": 10, "price": 100, "clearing_price": 100, "filled": 10, "profit": 100000}
+  ],
+  "observation": {
+    "n_agents": 10,
+    "w": 50,
+    "market_open": true,
+    "round_index": 15,
+    "horizon": 15,
+    "own_p": 100,
+    "own_q": 400,
+    "own_d": 200,
+    "own_side": "BUY",
+    "own_cap": 400,
+    "own_qty": 10,
+    "mechanism_version": "single_order_v1",
+    "history": "<see history field>"
+  },
+  "waves": {
+    "purchase": {"question": "Choose the procurement quantity that maximizes expected profit under the stated demand rule and market conditions.", "candidates": [{"candidate_id": "q_000", "label": "Procure exactly zero capacity certificates."}, {"candidate_id": "q_025", "label": "Procure exactly twenty-five capacity certificates."}, {"candidate_id": "q_050", "label": "Procure exactly fifty capacity certificates."}, {"candidate_id": "q_075", "label": "Procure exactly seventy-five capacity certificates."}, {"candidate_id": "q_100", "label": "Procure exactly one hundred capacity certificates."}, {"candidate_id": "q_125", "label": "Procure exactly one hundred twenty-five capacity certificates."}, {"candidate_id": "q_150", "label": "Procure exactly one hundred fifty capacity certificates."}, {"candidate_id": "q_175", "label": "Procure exactly one hundred seventy-five capacity certificates."}, {"candidate_id": "q_200", "label": "Procure exactly two hundred capacity certificates."}, {"candidate_id": "q_225", "label": "Procure exactly two hundred twenty-five capacity certificates."}, {"candidate_id": "q_250", "label": "Procure exactly two hundred fifty capacity certificates."}, {"candidate_id": "q_275", "label": "Procure exactly two hundred seventy-five capacity certificates."}, {"candidate_id": "q_300", "label": "Procure exactly three hundred capacity certificates."}, {"candidate_id": "q_325", "label": "Procure exactly three hundred twenty-five capacity certificates."}, {"candidate_id": "q_350", "label": "Procure exactly three hundred fifty capacity certificates."}, {"candidate_id": "q_375", "label": "Procure exactly three hundred seventy-five capacity certificates."}, {"candidate_id": "q_400", "label": "Procure exactly four hundred capacity certificates."}]},
+    "trade_side": {"question": "Choose one legal trade direction for this round, or hold without an order.", "candidates": [{"candidate_id": "side_buy", "label": "Submit one BUY order."}, {"candidate_id": "side_sell", "label": "Submit one SELL order."}, {"candidate_id": "side_hold", "label": "HOLD and submit no order."}]},
+    "trade_qty": {"question": "Choose the order quantity, from one through ten certificates.", "candidates": [{"candidate_id": "qty_01", "label": "Submit exactly one capacity certificate."}, {"candidate_id": "qty_02", "label": "Submit exactly two capacity certificates."}, {"candidate_id": "qty_03", "label": "Submit exactly three capacity certificates."}, {"candidate_id": "qty_04", "label": "Submit exactly four capacity certificates."}, {"candidate_id": "qty_05", "label": "Submit exactly five capacity certificates."}, {"candidate_id": "qty_06", "label": "Submit exactly six capacity certificates."}, {"candidate_id": "qty_07", "label": "Submit exactly seven capacity certificates."}, {"candidate_id": "qty_08", "label": "Submit exactly eight capacity certificates."}, {"candidate_id": "qty_09", "label": "Submit exactly nine capacity certificates."}, {"candidate_id": "qty_10", "label": "Submit exactly ten capacity certificates."}]},
+    "trade_price": {"question": "Choose a limit price in whole currency units between zero and one hundred, inclusive.", "candidates": [{"candidate_id": "price_000", "label": "Set the limit price to zero currency units per certificate."}, {"candidate_id": "price_010", "label": "Set the limit price to ten currency units per certificate."}, {"candidate_id": "price_020", "label": "Set the limit price to twenty currency units per certificate."}, {"candidate_id": "price_030", "label": "Set the limit price to thirty currency units per certificate."}, {"candidate_id": "price_040", "label": "Set the limit price to forty currency units per certificate."}, {"candidate_id": "price_050", "label": "Set the limit price to fifty currency units per certificate."}, {"candidate_id": "price_060", "label": "Set the limit price to sixty currency units per certificate."}, {"candidate_id": "price_070", "label": "Set the limit price to seventy currency units per certificate."}, {"candidate_id": "price_080", "label": "Set the limit price to eighty currency units per certificate."}, {"candidate_id": "price_090", "label": "Set the limit price to ninety currency units per certificate."}, {"candidate_id": "price_100", "label": "Set the limit price to one hundred currency units per certificate."}]}
+  }
+}
