@@ -1,0 +1,737 @@
+{
+  "schema": "jev-sell-semantics-comparison-v1",
+  "people": 8,
+  "planned_requests": 64,
+  "groups": {
+    "long10": {
+      "all": {
+        "eligible_people": 8,
+        "planned_paths_per_arm": 16,
+        "common_people": 8,
+        "common_paths": 16,
+        "descriptive_single_person": false,
+        "human_full_distribution": {
+          "mean": 8.75,
+          "median": 8,
+          "p95": 20,
+          "cdf": [
+            {
+              "value": 1,
+              "mass": 0.125,
+              "cdf": 0.125
+            },
+            {
+              "value": 5,
+              "mass": 0.125,
+              "cdf": 0.25
+            },
+            {
+              "value": 8,
+              "mass": 0.25,
+              "cdf": 0.5
+            },
+            {
+              "value": 9,
+              "mass": 0.25,
+              "cdf": 0.75
+            },
+            {
+              "value": 10,
+              "mass": 0.125,
+              "cdf": 0.875
+            },
+            {
+              "value": 20,
+              "mass": 0.125,
+              "cdf": 1.0
+            }
+          ]
+        },
+        "common_distributions": {
+          "human_raw": {
+            "mean": 8.75,
+            "median": 8,
+            "p95": 20,
+            "cdf": [
+              {
+                "value": 1,
+                "mass": 0.125,
+                "cdf": 0.125
+              },
+              {
+                "value": 5,
+                "mass": 0.125,
+                "cdf": 0.25
+              },
+              {
+                "value": 8,
+                "mass": 0.25,
+                "cdf": 0.5
+              },
+              {
+                "value": 9,
+                "mass": 0.25,
+                "cdf": 0.75
+              },
+              {
+                "value": 10,
+                "mass": 0.125,
+                "cdf": 0.875
+              },
+              {
+                "value": 20,
+                "mass": 0.125,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "human_grid5": {
+            "mean": 10.0,
+            "median": 10,
+            "p95": 20,
+            "cdf": [
+              {
+                "value": 5,
+                "mass": 0.25,
+                "cdf": 0.25
+              },
+              {
+                "value": 10,
+                "mass": 0.625,
+                "cdf": 0.875
+              },
+              {
+                "value": 20,
+                "mass": 0.125,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "original": {
+            "mean": 25.3125,
+            "median": 10.0,
+            "p95": 80.0,
+            "cdf": [
+              {
+                "value": 5.0,
+                "mass": 0.0625,
+                "cdf": 0.0625
+              },
+              {
+                "value": 10.0,
+                "mass": 0.5625,
+                "cdf": 0.625
+              },
+              {
+                "value": 15.0,
+                "mass": 0.0625,
+                "cdf": 0.6875
+              },
+              {
+                "value": 30.0,
+                "mass": 0.125,
+                "cdf": 0.8125
+              },
+              {
+                "value": 75.0,
+                "mass": 0.0625,
+                "cdf": 0.875
+              },
+              {
+                "value": 80.0,
+                "mass": 0.125,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "rules": {
+            "mean": 25.3125,
+            "median": 10.0,
+            "p95": 80.0,
+            "cdf": [
+              {
+                "value": 10.0,
+                "mass": 0.5625,
+                "cdf": 0.5625
+              },
+              {
+                "value": 15.0,
+                "mass": 0.125,
+                "cdf": 0.6875
+              },
+              {
+                "value": 20.0,
+                "mass": 0.0625,
+                "cdf": 0.75
+              },
+              {
+                "value": 30.0,
+                "mass": 0.0625,
+                "cdf": 0.8125
+              },
+              {
+                "value": 75.0,
+                "mass": 0.0625,
+                "cdf": 0.875
+              },
+              {
+                "value": 80.0,
+                "mass": 0.125,
+                "cdf": 1.0
+              }
+            ]
+          }
+        },
+        "arms": {
+          "original": {
+            "quoted": 16,
+            "client_numeric_abstain": 0,
+            "raw_human_w1": 16.5625,
+            "grid5_human_w1": 15.3125,
+            "events": {
+              "ge700": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "700_to_800": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "gt250": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "above_retail": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "ge65": {
+                "events": 3,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.1875,
+                "among_quotes": 0.1875,
+                "hypothetical_unreported_price_bounds": [
+                  0.1875,
+                  0.1875
+                ]
+              }
+            },
+            "scores": {
+              "raw_available_paths": 16,
+              "retained_available_paths": 16,
+              "raw_score_total_min": 0.99,
+              "raw_score_total_max": 1.0,
+              "raw_normalized_mass_le20": 0.5067550505050505,
+              "retained_normalized_mass_le20": 0.7508098386415497,
+              "raw_normalized_mass_ge65": 0.36884469696969696,
+              "retained_normalized_mass_ge65": 0.1792682863584503,
+              "raw_normalized_mass_ge700": 0.036982323232323235,
+              "retained_normalized_mass_ge700": 0.0
+            }
+          },
+          "rules": {
+            "quoted": 16,
+            "client_numeric_abstain": 0,
+            "raw_human_w1": 16.5625,
+            "grid5_human_w1": 15.3125,
+            "events": {
+              "ge700": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "700_to_800": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "gt250": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "above_retail": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "ge65": {
+                "events": 3,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.1875,
+                "among_quotes": 0.1875,
+                "hypothetical_unreported_price_bounds": [
+                  0.1875,
+                  0.1875
+                ]
+              }
+            },
+            "scores": {
+              "raw_available_paths": 16,
+              "retained_available_paths": 16,
+              "raw_score_total_min": 0.99,
+              "raw_score_total_max": 1.0,
+              "raw_normalized_mass_le20": 0.5007007575757576,
+              "retained_normalized_mass_le20": 0.7515093483609334,
+              "raw_normalized_mass_ge65": 0.34929924242424243,
+              "retained_normalized_mass_ge65": 0.1641922203764075,
+              "raw_normalized_mass_ge700": 0.03256944444444444,
+              "retained_normalized_mass_ge700": 0.0
+            }
+          }
+        },
+        "rules_minus_original_raw_w1": 0.0,
+        "auxiliary_person_w1_delta": {
+          "n": 8,
+          "mean": -0.375,
+          "median": 0.0,
+          "improved_people": 1,
+          "worsened_people": 1,
+          "tied_people": 6
+        }
+      },
+      "stratum_counts": {
+        "all": 8,
+        "has_sell_history": 7,
+        "no_sell_history": 1
+      }
+    },
+    "short3": {
+      "all": {
+        "eligible_people": 8,
+        "planned_paths_per_arm": 16,
+        "common_people": 8,
+        "common_paths": 16,
+        "descriptive_single_person": false,
+        "human_full_distribution": {
+          "mean": 8.75,
+          "median": 8,
+          "p95": 20,
+          "cdf": [
+            {
+              "value": 1,
+              "mass": 0.125,
+              "cdf": 0.125
+            },
+            {
+              "value": 5,
+              "mass": 0.125,
+              "cdf": 0.25
+            },
+            {
+              "value": 8,
+              "mass": 0.25,
+              "cdf": 0.5
+            },
+            {
+              "value": 9,
+              "mass": 0.25,
+              "cdf": 0.75
+            },
+            {
+              "value": 10,
+              "mass": 0.125,
+              "cdf": 0.875
+            },
+            {
+              "value": 20,
+              "mass": 0.125,
+              "cdf": 1.0
+            }
+          ]
+        },
+        "common_distributions": {
+          "human_raw": {
+            "mean": 8.75,
+            "median": 8,
+            "p95": 20,
+            "cdf": [
+              {
+                "value": 1,
+                "mass": 0.125,
+                "cdf": 0.125
+              },
+              {
+                "value": 5,
+                "mass": 0.125,
+                "cdf": 0.25
+              },
+              {
+                "value": 8,
+                "mass": 0.25,
+                "cdf": 0.5
+              },
+              {
+                "value": 9,
+                "mass": 0.25,
+                "cdf": 0.75
+              },
+              {
+                "value": 10,
+                "mass": 0.125,
+                "cdf": 0.875
+              },
+              {
+                "value": 20,
+                "mass": 0.125,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "human_grid5": {
+            "mean": 10.0,
+            "median": 10,
+            "p95": 20,
+            "cdf": [
+              {
+                "value": 5,
+                "mass": 0.25,
+                "cdf": 0.25
+              },
+              {
+                "value": 10,
+                "mass": 0.625,
+                "cdf": 0.875
+              },
+              {
+                "value": 20,
+                "mass": 0.125,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "original": {
+            "mean": 30.625,
+            "median": 10.0,
+            "p95": 90.0,
+            "cdf": [
+              {
+                "value": 10.0,
+                "mass": 0.625,
+                "cdf": 0.625
+              },
+              {
+                "value": 15.0,
+                "mass": 0.0625,
+                "cdf": 0.6875
+              },
+              {
+                "value": 65.0,
+                "mass": 0.125,
+                "cdf": 0.8125
+              },
+              {
+                "value": 75.0,
+                "mass": 0.0625,
+                "cdf": 0.875
+              },
+              {
+                "value": 80.0,
+                "mass": 0.0625,
+                "cdf": 0.9375
+              },
+              {
+                "value": 90.0,
+                "mass": 0.0625,
+                "cdf": 1.0
+              }
+            ]
+          },
+          "rules": {
+            "mean": 27.8125,
+            "median": 10.0,
+            "p95": 80.0,
+            "cdf": [
+              {
+                "value": 10.0,
+                "mass": 0.625,
+                "cdf": 0.625
+              },
+              {
+                "value": 15.0,
+                "mass": 0.0625,
+                "cdf": 0.6875
+              },
+              {
+                "value": 30.0,
+                "mass": 0.0625,
+                "cdf": 0.75
+              },
+              {
+                "value": 65.0,
+                "mass": 0.0625,
+                "cdf": 0.8125
+              },
+              {
+                "value": 75.0,
+                "mass": 0.0625,
+                "cdf": 0.875
+              },
+              {
+                "value": 80.0,
+                "mass": 0.125,
+                "cdf": 1.0
+              }
+            ]
+          }
+        },
+        "arms": {
+          "original": {
+            "quoted": 16,
+            "client_numeric_abstain": 0,
+            "raw_human_w1": 21.875,
+            "grid5_human_w1": 20.625,
+            "events": {
+              "ge700": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "700_to_800": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "gt250": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "above_retail": {
+                "events": 3,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.1875,
+                "among_quotes": 0.1875,
+                "hypothetical_unreported_price_bounds": [
+                  0.1875,
+                  0.1875
+                ]
+              },
+              "ge65": {
+                "events": 5,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.3125,
+                "among_quotes": 0.3125,
+                "hypothetical_unreported_price_bounds": [
+                  0.3125,
+                  0.3125
+                ]
+              }
+            },
+            "scores": {
+              "raw_available_paths": 16,
+              "retained_available_paths": 16,
+              "raw_score_total_min": 0.99,
+              "raw_score_total_max": 1.0,
+              "raw_normalized_mass_le20": 0.48184343434343435,
+              "retained_normalized_mass_le20": 0.6562777982344767,
+              "raw_normalized_mass_ge65": 0.4149431818181818,
+              "retained_normalized_mass_ge65": 0.28827862703710383,
+              "raw_normalized_mass_ge700": 0.05510732323232324,
+              "retained_normalized_mass_ge700": 0.0
+            }
+          },
+          "rules": {
+            "quoted": 16,
+            "client_numeric_abstain": 0,
+            "raw_human_w1": 19.0625,
+            "grid5_human_w1": 17.8125,
+            "events": {
+              "ge700": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "700_to_800": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "gt250": {
+                "events": 0,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0,
+                "among_quotes": 0.0,
+                "hypothetical_unreported_price_bounds": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "above_retail": {
+                "events": 1,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.0625,
+                "among_quotes": 0.0625,
+                "hypothetical_unreported_price_bounds": [
+                  0.0625,
+                  0.0625
+                ]
+              },
+              "ge65": {
+                "events": 4,
+                "planned": 16,
+                "quoted": 16,
+                "no_quote": 0,
+                "confirmed_quote_event_per_planned": 0.25,
+                "among_quotes": 0.25,
+                "hypothetical_unreported_price_bounds": [
+                  0.25,
+                  0.25
+                ]
+              }
+            },
+            "scores": {
+              "raw_available_paths": 16,
+              "retained_available_paths": 16,
+              "raw_score_total_min": 0.99,
+              "raw_score_total_max": 1.0,
+              "raw_normalized_mass_le20": 0.5206376262626262,
+              "retained_normalized_mass_le20": 0.7168083517842875,
+              "raw_normalized_mass_ge65": 0.3690530303030303,
+              "retained_normalized_mass_ge65": 0.21429804788095524,
+              "raw_normalized_mass_ge700": 0.051388888888888894,
+              "retained_normalized_mass_ge700": 0.0
+            }
+          }
+        },
+        "rules_minus_original_raw_w1": -2.8125,
+        "auxiliary_person_w1_delta": {
+          "n": 8,
+          "mean": -2.8125,
+          "median": 0.0,
+          "improved_people": 2,
+          "worsened_people": 0,
+          "tied_people": 6
+        }
+      },
+      "stratum_counts": {
+        "all": 8,
+        "has_sell_history": 7,
+        "no_sell_history": 1
+      }
+    }
+  },
+  "interpretation": "Primary is person-balanced pooled price W1 on paired successful paths, not mean per-person error. Contemporary arms differ only by a bundle of neutral economic definitions. No quote is not zero, model STOP, or a technical failure. No-SELL-history has one person and is descriptive only. Quantities are old model selections, not human target quantities; human prices can be off-grid. Scores, retained sampling distributions and observed samples are distinct, uncalibrated evidence. Two repeats of eight development people in one market do not identify causal error shares, model capacity or cross-market generalization.",
+  "status": {
+    "physical_requests": 64,
+    "status": "COMPLETE"
+  },
+  "plan_sha256": "6c17157cfa06583ca019aa13e020e554e0cfc74def6482656673678e8f8f96fc",
+  "accounting": {
+    "requests": 64,
+    "input_tokens": 420544,
+    "cost_nanodollars": 17662848,
+    "observed_peak_inflight": 8,
+    "max_rolling_second_requests": 4,
+    "max_rolling_reserved_bytes": 48000,
+    "elapsed_seconds": 16.421999999991385
+  },
+  "publication_note": "Numeric subgroup results are private: one no-SELL-history person and its complement could identify a personal distribution. Public metrics/CDFs cover all eight only; this suppression does not omit anyone from the ALL denominator."
+}
